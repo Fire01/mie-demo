@@ -11,6 +11,6 @@
   "license": "MIT",
   "dependencies": {
     "bcryptjs": "^2.4.3",
-    "make-it-easy": "make-it-easy"
+    "make-it-easy": "^0.0.8"
   }
 }
