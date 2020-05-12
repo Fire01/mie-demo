@@ -8,7 +8,7 @@ module.exports = [
         acl: '@',
         fn: (req, res) => {
             return res.render('_base/main', {
-                homePath: '/users',
+                homePath: '/test_view',
                 user: req.session.user,
                 menu: [
                     {text: "Home", icon: "home", location: "/", "target": "_self"},

@@ -7,9 +7,9 @@ module.exports = new View(Timesheet, {
     path: '/timesheets',
     form: timesheet,
     acl: '@',
-    readers: (user, doc) => user._id === doc.user._id || user.roles.indexOf('Admin') !== -1,
+    readers: (args) => args.userAccess._id === args.doc.user._id || args.hasRoles('Admin'),
     column: [
-        {data: 'user', render: (val) => val.name},
+        {data: 'user', render: (args) => args.value.name},
         {data: 'date', type: 'date', title: 'Created'},
     ],
 });

@@ -6,7 +6,7 @@ module.exports = new View(User, {
     name: 'view_users',
     path: '/users',
     form: FormUser,
-    acl: '@',
+    acl: 'Admin',
     column: [
         {data: 'name'},
         {data: 'username'},

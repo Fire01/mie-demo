@@ -10,7 +10,7 @@ module.exports = new View(Group, {
     column: [
         {data: 'name'},
         {data: 'description'},
-        {data: 'member', render: (val, data) => val ? val.name : ''},
-        {data: 'members', render: (val, data) => val ? val.map(el => el && el.name).join(", ") : ''},
+        {data: 'member', render: (args) => args.value ? args.value.name : ''},
+        {data: 'members', render: (args) => args.value ? args.value.map(el => el && el.name).join(", ") : ''},
     ]
 });
